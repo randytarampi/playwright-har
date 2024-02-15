@@ -12,7 +12,8 @@
       "rootDir": "./src",
       "types": ["node"],
       "resolveJsonModule": true,
-      "declaration": true
+      "declaration": true,
+      "skipLibCheck": true
     }
   }
   
