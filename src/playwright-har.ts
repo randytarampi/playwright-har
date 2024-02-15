@@ -1,6 +1,6 @@
 import { harFromMessages } from 'chrome-har';
 import { writeFileSync } from 'fs';
-import { CDPSession, Page } from 'playwright-chromium';
+import type { CDPSession, Page } from 'playwright-chromium';
 import { PlaywrightHarConfig } from './playwright-har-config';
 
 export class PlaywrightHar {
@@ -16,6 +16,8 @@ export class PlaywrightHar {
 
         if (config == null) {
           this.config = new PlaywrightHarConfig();
+        } else {
+          this.config = config;
         }
     }
 
